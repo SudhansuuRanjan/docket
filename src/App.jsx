@@ -24,9 +24,11 @@ function App() {
         <Heading />
         <div className='notes-grid'>
           {
-            notes.length === 0 ? <div>There isn't any note.</div> : notes.map((note, index) => {
-              return <Card id={note.id} handleDelete={handleDelete} key={index} content={note.content} date={note.date} />
-            })
+            notes.length === 0 ?
+              <div>There isn't any note.</div> :
+              notes.map((note, index) => {
+                return <Card id={note.id} handleDelete={handleDelete} key={index} content={note.content} date={note.date} />
+              })
           }
         </div>
       </div>
